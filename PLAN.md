@@ -1,6 +1,6 @@
 # PLAN: Commit City (lstuek.github.io)
 
-Now: spec approved 2026-10-27 ([ref/spec.md](ref/spec.md)), posted as the spec issue; tickets being split. Nothing built yet.
+Now: spec approved 2026-10-27 ([ref/spec.md](ref/spec.md)), posted as the spec issue #1; 12 tickets #2-#13 (sub-issues of #1, blocking links set). Nothing built yet. Start: #2 (city data), #3 (page shell); #10 (panel lines) after #4.
 
 Order: city data in the PC job, then the first block, then Lincoln's first-block review, then the rest of the city, then the panel lines and the profile swap.
 
