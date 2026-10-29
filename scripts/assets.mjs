@@ -1,7 +1,5 @@
-// Asset pipeline: source glTF -> meshopt geometry + KTX2 (Basis) textures, as GLB.
 // KTX2 encoding uses the Basis Universal WASM encoder (ktx2-encoder), so no
 // native toktx binary is needed locally or in CI.
-// Usage: node scripts/assets.mjs <in.gltf> <out.glb>
 import { mkdir } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import { NodeIO } from '@gltf-transform/core';
@@ -29,10 +27,9 @@ export async function compressModel(input, output) {
   await mkdir(dirname(output), { recursive: true });
   await io.write(output, doc);
 
-  // Read back and prove the output really is meshopt + KTX2.
-  const json = (await io.readAsJSON(output)).json;
-  const used = json.extensionsUsed ?? [];
-  const textures = (await io.read(output)).getRoot().listTextures();
+  const written = await io.readAsJSON(output);
+  const used = written.json.extensionsUsed ?? [];
+  const textures = (await io.readJSON(written)).getRoot().listTextures();
   const problems = [];
   if (!used.includes('EXT_meshopt_compression')) problems.push('no EXT_meshopt_compression');
   if (!used.includes('KHR_texture_basisu')) problems.push('no KHR_texture_basisu');

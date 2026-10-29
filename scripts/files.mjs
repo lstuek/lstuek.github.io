@@ -1,7 +1,6 @@
 import { readdir } from 'node:fs/promises';
 import { join, relative, sep } from 'node:path';
 
-/** Every file under dir, as forward-slash paths relative to dir. */
 export async function listFiles(dir) {
   const entries = await readdir(dir, { recursive: true, withFileTypes: true });
   return entries

@@ -23,10 +23,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      # Headless shell only; KTX2 encoding uses the Basis WASM encoder, so no toktx install.
       - run: npx playwright install --with-deps --only-shell chromium
-      # Unit tests (hash, resolve, size incl. the oversized fixture), asset
-      # pipeline on the sample glTF, build, hash check, size check, headless test.
       - run: npm run gate
       - if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5

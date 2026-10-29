@@ -1,8 +1,3 @@
-// Download-size check (ref/build.md Budgets): first playable 15 MB or less,
-// counting scripts, decoders, textures, models and audio. Measures raw bytes on
-// disk of every built file, an upper bound on the cold-cache transfer (Pages
-// gzips text, so real transfer is lower). Until the world streamer splits waves
-// (later ticket), the whole build counts as first playable.
 import { stat } from 'node:fs/promises';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';

@@ -1,8 +1,3 @@
-// Hash and resolve check for the built site.
-// index.html keeps its fixed name; every other file must carry a content hash
-// (Vite's "<name>-<hash>.<ext>", hash = 8+ base64url chars). Every local URL
-// referenced from index.html, scripts and styles must resolve to a built file,
-// and index.html may not load anything from another origin (no CDN).
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';

@@ -1,5 +1,3 @@
-// Page shell: a plain three.js scene that loads one pipeline model
-// (meshopt + KTX2, decoded by local hashed decoders) and the city data file.
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { KTX2Loader } from 'three/examples/jsm/loaders/KTX2Loader.js';
