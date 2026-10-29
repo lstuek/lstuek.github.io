@@ -28,8 +28,10 @@ const ktx2 = new KTX2Loader(manager).setTranscoderPath('basis/').detectSupport(r
 const gltfLoader = new GLTFLoader(manager).setKTX2Loader(ktx2).setMeshoptDecoder(MeshoptDecoder);
 
 async function loadCityData() {
-  const url = new URLSearchParams(location.search).get('data');
-  if (!url) return null;
+  const param = new URLSearchParams(location.search).get('data');
+  if (!param) return null;
+  const url = new URL(param, location.href);
+  if (url.origin !== location.origin) throw new Error('city data must be same-origin');
   const response = await fetch(url);
   if (!response.ok) throw new Error(`city data ${response.status}`);
   return response.json();

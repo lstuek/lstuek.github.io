@@ -4,7 +4,7 @@ import { pathToFileURL } from 'node:url';
 import { listFiles } from './files.mjs';
 
 const FIXED_NAMES = new Set(['index.html']);
-const HASHED = /-[A-Za-z0-9_-]{8,}\.[A-Za-z0-9]+$/;
+const HASHED = /-(?![a-z]{8}\.)[A-Za-z0-9_-]{8}\.[A-Za-z0-9]+$/;
 const HTML_REF = /\s(?:src|href)\s*=\s*["']([^"']+)["']/g;
 const ASSET_REF = /["'`(]((?:\.{0,2}\/)?assets\/[^"'`)\s?#]+)/g;
 const SITE = 'https://lstuek.github.io';
