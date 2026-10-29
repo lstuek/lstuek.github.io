@@ -1,8 +1,8 @@
 # PLAN: Commit City (lstuek.github.io)
 
-Now: spec approved 2026-10-27 ([ref/spec.md](ref/spec.md)), posted as the spec issue #1; 12 tickets #2-#13 (sub-issues of #1, blocking links set). Nothing built yet. Start: #2 (city data), #3 (page shell); #10 (panel lines) after #4.
+Now: spec approved 2026-10-27 ([ref/spec.md](ref/spec.md)), posted as the spec issue #1; 19 tickets #2-#20 after the Codex ticket audit (2026-10-29; sub-issues of #1, blocking links read back). Nothing built yet. Unblocked: #2 (city data), #3 (page shell), #15 (pilot art kit), #16 (cyborg and car).
 
-Order: city data in the PC job, then the first block, then Lincoln's first-block review, then the rest of the city, then the panel lines and the profile swap.
+Order: city data, page shell and the first art in parallel; then data, movement, quality and sound; then the first block and Lincoln's first-block review; then the full city; then final polish, the final review, and the profile swap.
 
 ## Lincoln queue
 - 2026-10-27: judge the first block in the browser when it is ready (look, hologram symbols, default movement mode, loading bar color, stats bar style) and run it once on your iPhone.

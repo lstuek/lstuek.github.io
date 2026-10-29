@@ -57,14 +57,13 @@ Assets
 
 Profile
 - The stats card SVG and its render workflow move to the profile repo's archive with a recovery note. The PC job keeps uploading data.
-- The profile README shows a still image of the city (under the Camo 5 MiB cap, with a cache-busting query) that links to lstuek.github.io.
+- The profile README shows a 4 to 6 second looping clip of the city in rain (animated GIF or WebP, 8 MB or less; GitHub documents images and GIFs up to 10 MB) that links to lstuek.github.io, with a still image under 3 MB as backup. File names are versioned. The Camo size cap and cache time are unverified, so the loop is proven on the real profile before the swap (Lincoln 2026-10-29).
 
-Order of work
-1. City data in the PC job (privacy guard first).
-2. First block: one landmark, hologram, rain, wet road, shadows, signs, stats bar, panel, all 5 movement modes, benchmark mode, phone lite tier. Renderer measured and chosen here.
-3. Lincoln's first-block review: look, hologram symbols, default movement mode, a provisional fly-in or menu choice, and one run on his iPhone. The fly-in is accepted only after the full fly-in route is loaded, warmed and passes the smoothness bar in step 4.
-4. Rest of the city, locked zone, sound, phone tier, credits, link card.
-5. Panel lines approval, profile swap, launch.
+Art production
+- Owned art (props, trim sheets, landmarks, holograms, character and car fixes) is built by deterministic Blender Python scripts run headless with portable Blender 5.2.3, keeping each editable .blend and its script in the repo. The local blender-to-web guide covers the export handoff; its files never enter this repo (no license).
+- Every look ticket renders fixed camera shots next to the matching look references and checks silhouettes, surface detail, shadow contact, reflection alignment, neon spill and text readability; desktop and phone lite are approved separately.
+
+Order of work: the tickets on GitHub (#2 to #20) and their blocking links own it; PLAN.md summarizes it.
 
 Desktop frame budget (GPU ms per frame, allocations from the optimization research, replaced by first-block measurements): shadow 1.2, main city pass 4.5, wet-street reflection 1.6, rain, light cards and holograms 1.2, fog and light shafts 0.8, AO 0.8, bloom 1.0, drive-mode speed blur 0.6, tone map, SMAA and upscale 0.9, UI and compositor 0.5, reserve 3.5; total 16.6.
 

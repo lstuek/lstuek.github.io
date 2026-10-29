@@ -8,7 +8,7 @@ Lincoln's GitHub profile shows a stats card. It reads as a list of numbers and s
 
 ## Solution
 
-A single hosted page at lstuek.github.io: a compact, dense cyberpunk city at night, in rain, built in three.js with game-studio optimization. Eight landmarks stand for his main projects; each has a hologram and opens a panel with a plain description, real numbers and, where one exists, a link to the live site. A stats bar shows lifetime AI tokens, total commits and top language. Visitors move in one of five modes behind a switch. The data comes from Lincoln's existing PC job, which uploads numbers only. The city replaces the stats card on the GitHub profile; a still image of the city links to the page.
+A single hosted page at lstuek.github.io: a compact, dense cyberpunk city at night, in rain, built in three.js with game-studio optimization. Eight landmarks stand for his main projects; each has a hologram and opens a panel with a plain description, real numbers and, where one exists, a link to the live site. A stats bar shows lifetime AI tokens, total commits and top language. Visitors move in one of five modes behind a switch. The data comes from Lincoln's existing PC job, which uploads numbers only. The city replaces the stats card on the GitHub profile; a short looping clip of the city links to the page.
 
 ## User Stories
 
@@ -72,7 +72,7 @@ Lincoln
 45. As Lincoln, I want hologram symbol options shown at the first-block review, so that I pick them by eye.
 46. As Lincoln, I want a speed-test link that reports frame times per movement mode, so that smoothness is measured, not guessed.
 47. As Lincoln, I want the old stats card archived and ready to restore, so that I can go back.
-48. As Lincoln, I want my GitHub profile to show a still image of the city that links to it, so that profile visitors enter the city.
+48. As Lincoln, I want my GitHub profile to show a short looping clip of the city (still image as backup) that links to it, so that profile visitors see the city move and enter it.
 49. As Lincoln, I want a paid asset only after I say yes to one specific kit and price, and never as a raw file in the public repo, so that I control spend and licenses.
 
 ## Out of Scope
